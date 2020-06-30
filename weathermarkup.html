@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Weather App</title>
+  </head>
+
+  <body>
+    <h1 id="temperature"></h1>
+    <h2 id="description"></h2>
+    <p id="location"></p>
+  </body>
+
+  <script src="app.js"></script>
+</html>
+let api = "https://api.openweathermap.org/data/2.5/weather";
+let apiKey = "44aa9f85d8f1e0aa6db4766382453bdd";
+navigator.geolocation.getCurrentPosition(success, error);
+function success(position) {
+ console.log(position);
+}
+function error() {
+ console.log("error");
+}
+
+getWeather()
