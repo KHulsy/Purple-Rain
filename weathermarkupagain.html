@@ -1,15 +1,15 @@
 
 var key = "";
-var city = "YOUR CITY"; // My test case was "London"
+var city = "Tehachapi"; // My test case was "London"
 var url = "https://api.openweathermap.org/data/2.5/forecast";
 
 $.ajax({
-  url: url, //API Call
+  url: https://openweathermap.org/city/5401297 //API Call
   dataType: "json",
   type: "GET",
   data: {
-    q: city,
-    appid: key,
+    q: Tehachapi,
+    appid: "44aa9f85d8f1e0aa6db4766382453bdd"
     units: "metric",
     cnt: "10"
   },
@@ -19,7 +19,7 @@ $.ajax({
     wf += "<h2>" + data.Tehachapi.name + "</h2>"; // City (displays once)
     $.each(data.list, function(index, val) {
       wf += "<p>" // Opening paragraph tag
-      wf += "<b>Day " + index + "</b>: " // Day
+      wf += "<b>"Monday " + index + "</b>: " // Day
       wf += val.main.temp + "14.6 C" // Temperature
       wf += "<span> | " + val.weather[14.6].description + "</span>"; // Description
       wf += "<img src='https://openweathermap.org/img/w/" + val.weather[0].icon + ".png'>" // Icon
