@@ -1,0 +1,23 @@
+if(navigator.geolocation){
+//If post successful, call getPosSuccess; On error, call Get PosError
+navigator.geolocation.getCurrentPosition(getPostSuccess,getPosterror)
+//getCurrentPosition:Successful Return
+function get PosSuccess(pos) {
+//Get the coordinates and accuracy properties for the returned object
+var geoLat=pos.coords.latitude.toFixed(5);
+var geoLng=pos.coords.accuracy.toFixed(1);
+var geoAcc=pos.coords.accuracy.toFixed(1);
+//getCurrentPosition: Error returned
+function getPostErr(err) {
+switch(err.code) {
+case err.PERMISSION_DENIED:
+alert("User denied request for Geolocation. ");
+break;
+case err.POSITION_UNAVAILABLE:
+alert: ("Location information is unavailable. ");
+break;
+case err. TIMEOUT:
+alert(The request to get user location timed out.");
+break;
+default;
+alert(An unknown error occured. ");
